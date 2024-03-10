@@ -1,0 +1,567 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed May 24 13:56:51 2023
+# Process ID: 16548
+# Current directory: D:/project_coa
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6760 D:\project_coa\project_coa.xpr
+# Log file: D:/project_coa/vivado.log
+# Journal file: D:/project_coa\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/project_coa/project_coa.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 654.855 ; gain = 41.598
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed May 24 14:13:50 2023...
+on
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_top_module' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_top_module_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xelab -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_top_module_behav xil_defaultlib.testbench_top_module xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_top_module_behav xil_defaultlib.testbench_top_module xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3705] select index 2 into 'MEM' is out of bounds [D:/project_coa/elemets.v:135]
+WARNING: [VRFC 10-3705] select index 3 into 'MEM' is out of bounds [D:/project_coa/elemets.v:136]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 710.746 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_top_module_behav -key {Behavioral:sim_1:Functional:testbench_top_module} -tclbatch {testbench_top_module.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_top_module.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 727.301 ; gain = 16.555
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_top_module_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 727.301 ; gain = 18.008
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: MIPS_ProcessorallUNIT
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1151.637 ; gain = 155.176
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'MIPS_ProcessorallUNIT' [D:/project_coa/allunit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ProgramCounter' [D:/project_coa/elemets.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'ProgramCounter' (1#1) [D:/project_coa/elemets.v:22]
+INFO: [Synth 8-6157] synthesizing module 'InstructionMemory' [D:/project_coa/elemets.v:127]
+WARNING: [Synth 8-6896] index 2 out of range inside initial block, initial block items will be ignored [D:/project_coa/elemets.v:135]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionMemory' (2#1) [D:/project_coa/elemets.v:127]
+INFO: [Synth 8-6157] synthesizing module 'IF_ID_Register' [D:/project_coa/elemets.v:236]
+INFO: [Synth 8-6155] done synthesizing module 'IF_ID_Register' (3#1) [D:/project_coa/elemets.v:236]
+WARNING: [Synth 8-7023] instance 'if_id_reg' of module 'IF_ID_Register' has 4 connections declared, but only 3 given [D:/project_coa/allunit.v:34]
+INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [D:/project_coa/elemets.v:304]
+	Parameter R_TYPE bound to: 6'b000000 
+	Parameter LW bound to: 6'b100011 
+	Parameter SW bound to: 6'b101011 
+	Parameter BEQ bound to: 6'b000100 
+	Parameter J bound to: 6'b000010 
+WARNING: [Synth 8-567] referenced signal 'alu_op' should be on the sensitivity list [D:/project_coa/elemets.v:336]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (4#1) [D:/project_coa/elemets.v:304]
+WARNING: [Synth 8-689] width (6) of port connection 'alu_control' does not match port width (4) of module 'ControlUnit' [D:/project_coa/allunit.v:35]
+INFO: [Synth 8-6157] synthesizing module 'SignExtender_16to32' [D:/project_coa/elemets.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'SignExtender_16to32' (5#1) [D:/project_coa/elemets.v:177]
+INFO: [Synth 8-6157] synthesizing module 'registerfile' [D:/project_coa/elemets.v:45]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/project_coa/elemets.v:96]
+INFO: [Synth 8-6155] done synthesizing module 'registerfile' (6#1) [D:/project_coa/elemets.v:45]
+WARNING: [Synth 8-7023] instance 'regfile' of module 'registerfile' has 8 connections declared, but only 7 given [D:/project_coa/allunit.v:39]
+INFO: [Synth 8-6157] synthesizing module 'ID_EX_Register' [D:/project_coa/elemets.v:252]
+INFO: [Synth 8-6155] done synthesizing module 'ID_EX_Register' (7#1) [D:/project_coa/elemets.v:252]
+WARNING: [Synth 8-7023] instance 'id_ex_reg' of module 'ID_EX_Register' has 4 connections declared, but only 3 given [D:/project_coa/allunit.v:41]
+INFO: [Synth 8-6157] synthesizing module 'multiplexer32bit' [D:/project_coa/elemets.v:221]
+INFO: [Synth 8-6155] done synthesizing module 'multiplexer32bit' (8#1) [D:/project_coa/elemets.v:221]
+INFO: [Synth 8-6157] synthesizing module 'ALU_32bit' [D:/project_coa/elemets.v:182]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_32bit' (9#1) [D:/project_coa/elemets.v:182]
+WARNING: [Synth 8-689] width (6) of port connection 'alu_control' does not match port width (4) of module 'ALU_32bit' [D:/project_coa/allunit.v:43]
+INFO: [Synth 8-6157] synthesizing module 'EX_MEM_Register' [D:/project_coa/elemets.v:269]
+INFO: [Synth 8-6155] done synthesizing module 'EX_MEM_Register' (10#1) [D:/project_coa/elemets.v:269]
+WARNING: [Synth 8-7023] instance 'ex_mem_reg' of module 'EX_MEM_Register' has 4 connections declared, but only 3 given [D:/project_coa/allunit.v:45]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [D:/project_coa/elemets.v:148]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-567] referenced signal 'write_enable' should be on the sensitivity list [D:/project_coa/elemets.v:163]
+WARNING: [Synth 8-567] referenced signal 'write_data' should be on the sensitivity list [D:/project_coa/elemets.v:163]
+WARNING: [Synth 8-567] referenced signal 'read_enable' should be on the sensitivity list [D:/project_coa/elemets.v:169]
+WARNING: [Synth 8-567] referenced signal 'memory' should be on the sensitivity list [D:/project_coa/elemets.v:169]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (11#1) [D:/project_coa/elemets.v:148]
+INFO: [Synth 8-6157] synthesizing module 'MEM_WB_Register' [D:/project_coa/elemets.v:286]
+INFO: [Synth 8-6155] done synthesizing module 'MEM_WB_Register' (12#1) [D:/project_coa/elemets.v:286]
+WARNING: [Synth 8-7023] instance 'mem_wb_reg' of module 'MEM_WB_Register' has 4 connections declared, but only 3 given [D:/project_coa/allunit.v:49]
+INFO: [Synth 8-6157] synthesizing module 'HazardDetectionUnit' [D:/project_coa/elemets.v:436]
+INFO: [Synth 8-6155] done synthesizing module 'HazardDetectionUnit' (13#1) [D:/project_coa/elemets.v:436]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/project_coa/allunit.v:53]
+INFO: [Synth 8-6157] synthesizing module 'ForwardingUnit' [D:/project_coa/elemets.v:460]
+INFO: [Synth 8-6155] done synthesizing module 'ForwardingUnit' (14#1) [D:/project_coa/elemets.v:460]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/project_coa/allunit.v:57]
+INFO: [Synth 8-6157] synthesizing module 'HazardRemovalUnit' [D:/project_coa/elemets.v:492]
+INFO: [Synth 8-6155] done synthesizing module 'HazardRemovalUnit' (15#1) [D:/project_coa/elemets.v:492]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/project_coa/allunit.v:61]
+INFO: [Synth 8-6157] synthesizing module 'StructuralHazardRemovalUnit' [D:/project_coa/elemets.v:517]
+INFO: [Synth 8-6155] done synthesizing module 'StructuralHazardRemovalUnit' (16#1) [D:/project_coa/elemets.v:517]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/project_coa/allunit.v:63]
+INFO: [Synth 8-6157] synthesizing module 'LoadHazardRemovalUnit' [D:/project_coa/elemets.v:542]
+INFO: [Synth 8-6155] done synthesizing module 'LoadHazardRemovalUnit' (17#1) [D:/project_coa/elemets.v:542]
+WARNING: [Synth 8-3848] Net reset in module/entity MIPS_ProcessorallUNIT does not have driver. [D:/project_coa/allunit.v:14]
+WARNING: [Synth 8-3848] Net regread in module/entity MIPS_ProcessorallUNIT does not have driver. [D:/project_coa/allunit.v:23]
+WARNING: [Synth 8-3848] Net mem_to_reg in module/entity MIPS_ProcessorallUNIT does not have driver. [D:/project_coa/allunit.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'MIPS_ProcessorallUNIT' (18#1) [D:/project_coa/allunit.v:1]
+WARNING: [Synth 8-3331] design HazardRemovalUnit has unconnected port EX_MEM_RegRead
+WARNING: [Synth 8-3331] design ForwardingUnit has unconnected port mem_wb_mem_to_reg
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[31]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[30]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[29]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[28]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[27]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[26]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[15]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[14]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[13]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[12]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[11]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[10]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[9]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[8]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[7]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[6]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[5]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[4]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[3]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[2]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[1]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[0]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[31]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[30]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[29]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[28]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[27]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[26]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[25]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[24]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[23]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[22]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[21]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[10]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[9]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[8]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[7]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[6]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[5]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[4]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[3]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[2]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[1]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[0]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[31]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[30]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[29]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[28]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[27]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[26]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[25]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[24]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[23]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[22]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[21]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[15]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[14]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[13]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[12]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[11]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[10]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[9]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[8]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[7]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[6]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[5]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[4]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[3]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[2]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[1]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1215.477 ; gain = 219.016
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1225.973 ; gain = 229.512
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1225.973 ; gain = 229.512
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1353.477 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 1355.508 ; gain = 359.047
+41 Infos, 125 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:20 . Memory (MB): peak = 1355.508 ; gain = 618.543
+set_property top mainModule [current_fileset]
+update_compile_order -fileset sources_1
+close_design
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_top_module' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_top_module_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xelab -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_top_module_behav xil_defaultlib.testbench_top_module xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_top_module_behav xil_defaultlib.testbench_top_module xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3705] select index 2 into 'MEM' is out of bounds [D:/project_coa/elemets.v:135]
+WARNING: [VRFC 10-3705] select index 3 into 'MEM' is out of bounds [D:/project_coa/elemets.v:136]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_top_module_behav -key {Behavioral:sim_1:Functional:testbench_top_module} -tclbatch {testbench_top_module.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_top_module.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_top_module_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1355.508 ; gain = 0.000
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: mainModule
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1423.340 ; gain = 17.883
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'mainModule' [D:/project_coa/singlecycledatapath.v:37]
+INFO: [Synth 8-6157] synthesizing module 'Datapath' [D:/project_coa/singlecycledatapath.v:48]
+INFO: [Synth 8-6157] synthesizing module 'ProgramCounter' [D:/project_coa/elemets.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'ProgramCounter' (1#1) [D:/project_coa/elemets.v:22]
+INFO: [Synth 8-6157] synthesizing module 'InstructionMemory' [D:/project_coa/elemets.v:127]
+WARNING: [Synth 8-6896] index 2 out of range inside initial block, initial block items will be ignored [D:/project_coa/elemets.v:135]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionMemory' (2#1) [D:/project_coa/elemets.v:127]
+INFO: [Synth 8-6157] synthesizing module 'SignExtender_16to32' [D:/project_coa/elemets.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'SignExtender_16to32' (3#1) [D:/project_coa/elemets.v:177]
+INFO: [Synth 8-6157] synthesizing module 'registerfile' [D:/project_coa/elemets.v:45]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/project_coa/elemets.v:96]
+INFO: [Synth 8-6155] done synthesizing module 'registerfile' (4#1) [D:/project_coa/elemets.v:45]
+INFO: [Synth 8-6157] synthesizing module 'ALU_32bit' [D:/project_coa/elemets.v:182]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_32bit' (5#1) [D:/project_coa/elemets.v:182]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [D:/project_coa/elemets.v:148]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-567] referenced signal 'write_enable' should be on the sensitivity list [D:/project_coa/elemets.v:163]
+WARNING: [Synth 8-567] referenced signal 'write_data' should be on the sensitivity list [D:/project_coa/elemets.v:163]
+WARNING: [Synth 8-567] referenced signal 'read_enable' should be on the sensitivity list [D:/project_coa/elemets.v:169]
+WARNING: [Synth 8-567] referenced signal 'memory' should be on the sensitivity list [D:/project_coa/elemets.v:169]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (6#1) [D:/project_coa/elemets.v:148]
+INFO: [Synth 8-6157] synthesizing module 'multiplexer5bit' [D:/project_coa/elemets.v:207]
+INFO: [Synth 8-6155] done synthesizing module 'multiplexer5bit' (7#1) [D:/project_coa/elemets.v:207]
+INFO: [Synth 8-6157] synthesizing module 'multiplexer32bit' [D:/project_coa/elemets.v:221]
+INFO: [Synth 8-6155] done synthesizing module 'multiplexer32bit' (8#1) [D:/project_coa/elemets.v:221]
+WARNING: [Synth 8-3848] Net reg_aa in module/entity Datapath does not have driver. [D:/project_coa/singlecycledatapath.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'Datapath' (9#1) [D:/project_coa/singlecycledatapath.v:48]
+INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [D:/project_coa/elemets.v:304]
+	Parameter R_TYPE bound to: 6'b000000 
+	Parameter LW bound to: 6'b100011 
+	Parameter SW bound to: 6'b101011 
+	Parameter BEQ bound to: 6'b000100 
+	Parameter J bound to: 6'b000010 
+WARNING: [Synth 8-567] referenced signal 'alu_op' should be on the sensitivity list [D:/project_coa/elemets.v:336]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (10#1) [D:/project_coa/elemets.v:304]
+INFO: [Synth 8-6155] done synthesizing module 'mainModule' (11#1) [D:/project_coa/singlecycledatapath.v:37]
+WARNING: [Synth 8-3331] design Datapath has unconnected port jump_sel[1]
+WARNING: [Synth 8-3331] design Datapath has unconnected port jump_sel[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1423.340 ; gain = 17.883
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1423.340 ; gain = 17.883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1423.340 ; gain = 17.883
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1530.758 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 1530.758 ; gain = 125.301
+26 Infos, 41 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 1530.758 ; gain = 125.352
+set_property top MIPS_Processor [current_fileset]
+update_compile_order -fileset sources_1
+close_design
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: MIPS_Processor
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1530.758 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'MIPS_Processor' [D:/project_coa/pipelined_register.v:22]
+INFO: [Synth 8-6157] synthesizing module 'ProgramCounter' [D:/project_coa/elemets.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'ProgramCounter' (1#1) [D:/project_coa/elemets.v:22]
+INFO: [Synth 8-6157] synthesizing module 'InstructionMemory' [D:/project_coa/elemets.v:127]
+WARNING: [Synth 8-6896] index 2 out of range inside initial block, initial block items will be ignored [D:/project_coa/elemets.v:135]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionMemory' (2#1) [D:/project_coa/elemets.v:127]
+INFO: [Synth 8-6157] synthesizing module 'IF_ID_Register' [D:/project_coa/elemets.v:236]
+INFO: [Synth 8-6155] done synthesizing module 'IF_ID_Register' (3#1) [D:/project_coa/elemets.v:236]
+WARNING: [Synth 8-7023] instance 'if_id_reg' of module 'IF_ID_Register' has 4 connections declared, but only 3 given [D:/project_coa/pipelined_register.v:54]
+INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [D:/project_coa/elemets.v:304]
+	Parameter R_TYPE bound to: 6'b000000 
+	Parameter LW bound to: 6'b100011 
+	Parameter SW bound to: 6'b101011 
+	Parameter BEQ bound to: 6'b000100 
+	Parameter J bound to: 6'b000010 
+WARNING: [Synth 8-567] referenced signal 'alu_op' should be on the sensitivity list [D:/project_coa/elemets.v:336]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (4#1) [D:/project_coa/elemets.v:304]
+WARNING: [Synth 8-689] width (6) of port connection 'alu_control' does not match port width (4) of module 'ControlUnit' [D:/project_coa/pipelined_register.v:55]
+INFO: [Synth 8-6157] synthesizing module 'SignExtender_16to32' [D:/project_coa/elemets.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'SignExtender_16to32' (5#1) [D:/project_coa/elemets.v:177]
+INFO: [Synth 8-6157] synthesizing module 'registerfile' [D:/project_coa/elemets.v:45]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/project_coa/elemets.v:96]
+INFO: [Synth 8-6155] done synthesizing module 'registerfile' (6#1) [D:/project_coa/elemets.v:45]
+WARNING: [Synth 8-7023] instance 'regfile' of module 'registerfile' has 8 connections declared, but only 7 given [D:/project_coa/pipelined_register.v:59]
+INFO: [Synth 8-6157] synthesizing module 'ID_EX_Register' [D:/project_coa/elemets.v:252]
+INFO: [Synth 8-6155] done synthesizing module 'ID_EX_Register' (7#1) [D:/project_coa/elemets.v:252]
+WARNING: [Synth 8-7023] instance 'id_ex_reg' of module 'ID_EX_Register' has 4 connections declared, but only 3 given [D:/project_coa/pipelined_register.v:61]
+INFO: [Synth 8-6157] synthesizing module 'multiplexer32bit' [D:/project_coa/elemets.v:221]
+INFO: [Synth 8-6155] done synthesizing module 'multiplexer32bit' (8#1) [D:/project_coa/elemets.v:221]
+INFO: [Synth 8-6157] synthesizing module 'ALU_32bit' [D:/project_coa/elemets.v:182]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_32bit' (9#1) [D:/project_coa/elemets.v:182]
+WARNING: [Synth 8-689] width (6) of port connection 'alu_control' does not match port width (4) of module 'ALU_32bit' [D:/project_coa/pipelined_register.v:63]
+INFO: [Synth 8-6157] synthesizing module 'EX_MEM_Register' [D:/project_coa/elemets.v:269]
+INFO: [Synth 8-6155] done synthesizing module 'EX_MEM_Register' (10#1) [D:/project_coa/elemets.v:269]
+WARNING: [Synth 8-7023] instance 'ex_mem_reg' of module 'EX_MEM_Register' has 4 connections declared, but only 3 given [D:/project_coa/pipelined_register.v:65]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [D:/project_coa/elemets.v:148]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-567] referenced signal 'write_enable' should be on the sensitivity list [D:/project_coa/elemets.v:163]
+WARNING: [Synth 8-567] referenced signal 'write_data' should be on the sensitivity list [D:/project_coa/elemets.v:163]
+WARNING: [Synth 8-567] referenced signal 'read_enable' should be on the sensitivity list [D:/project_coa/elemets.v:169]
+WARNING: [Synth 8-567] referenced signal 'memory' should be on the sensitivity list [D:/project_coa/elemets.v:169]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (11#1) [D:/project_coa/elemets.v:148]
+INFO: [Synth 8-6157] synthesizing module 'MEM_WB_Register' [D:/project_coa/elemets.v:286]
+INFO: [Synth 8-6155] done synthesizing module 'MEM_WB_Register' (12#1) [D:/project_coa/elemets.v:286]
+WARNING: [Synth 8-7023] instance 'mem_wb_reg' of module 'MEM_WB_Register' has 4 connections declared, but only 3 given [D:/project_coa/pipelined_register.v:69]
+WARNING: [Synth 8-3848] Net mem_to_reg in module/entity MIPS_Processor does not have driver. [D:/project_coa/pipelined_register.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'MIPS_Processor' (13#1) [D:/project_coa/pipelined_register.v:22]
+WARNING: [Synth 8-3331] design MIPS_Processor has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1530.758 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1530.758 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1530.758 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1530.758 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1530.758 ; gain = 0.000
+30 Infos, 47 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1530.758 ; gain = 0.000
+close_design
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed May 24 22:47:24 2023...

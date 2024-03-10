@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed May 24 13:56:51 2023
+# Process ID: 16548
+# Current directory: D:/project_coa
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6760 D:\project_coa\project_coa.xpr
+# Log file: D:/project_coa/vivado.log
+# Journal file: D:/project_coa\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/project_coa/project_coa.xpr
+update_compile_order -fileset sources_1
+
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top MIPS_ProcessorallUNIT [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source testbench_top_module.tcl
+synth_design -rtl -name rtl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top mainModule [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+close_design
+close_sim
+launch_simulation
+source testbench_top_module.tcl
+synth_design -rtl -name rtl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top MIPS_Processor [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+close_design
+synth_design -rtl -name rtl_1
+close_design
+close_sim

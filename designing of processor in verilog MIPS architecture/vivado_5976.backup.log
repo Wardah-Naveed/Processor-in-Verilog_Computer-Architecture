@@ -1,0 +1,1537 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed May 24 06:22:44 2023
+# Process ID: 5976
+# Current directory: D:/project_coa
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1424 D:\project_coa\project_coa.xpr
+# Log file: D:/project_coa/vivado.log
+# Journal file: D:/project_coa\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/project_coa/project_coa.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+set_property top MIPS_ProcessorallUNIT [current_fileset]
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: MIPS_ProcessorallUNIT
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1119.359 ; gain = 171.312
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'MIPS_ProcessorallUNIT' [D:/project_coa/allunit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ProgramCounter' [D:/project_coa/elemets.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'ProgramCounter' (1#1) [D:/project_coa/elemets.v:22]
+INFO: [Synth 8-6157] synthesizing module 'InstructionMemory' [D:/project_coa/elemets.v:127]
+WARNING: [Synth 8-6896] index 2 out of range inside initial block, initial block items will be ignored [D:/project_coa/elemets.v:135]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionMemory' (2#1) [D:/project_coa/elemets.v:127]
+INFO: [Synth 8-6157] synthesizing module 'IF_ID_Register' [D:/project_coa/elemets.v:236]
+INFO: [Synth 8-6155] done synthesizing module 'IF_ID_Register' (3#1) [D:/project_coa/elemets.v:236]
+WARNING: [Synth 8-7023] instance 'if_id_reg' of module 'IF_ID_Register' has 4 connections declared, but only 3 given [D:/project_coa/allunit.v:34]
+INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [D:/project_coa/elemets.v:304]
+	Parameter R_TYPE bound to: 6'b000000 
+	Parameter LW bound to: 6'b100011 
+	Parameter SW bound to: 6'b101011 
+	Parameter BEQ bound to: 6'b000100 
+	Parameter J bound to: 6'b000010 
+WARNING: [Synth 8-567] referenced signal 'alu_op' should be on the sensitivity list [D:/project_coa/elemets.v:336]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (4#1) [D:/project_coa/elemets.v:304]
+WARNING: [Synth 8-689] width (6) of port connection 'alu_control' does not match port width (4) of module 'ControlUnit' [D:/project_coa/allunit.v:35]
+INFO: [Synth 8-6157] synthesizing module 'SignExtender_16to32' [D:/project_coa/elemets.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'SignExtender_16to32' (5#1) [D:/project_coa/elemets.v:177]
+INFO: [Synth 8-6157] synthesizing module 'registerfile' [D:/project_coa/elemets.v:45]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/project_coa/elemets.v:96]
+INFO: [Synth 8-6155] done synthesizing module 'registerfile' (6#1) [D:/project_coa/elemets.v:45]
+WARNING: [Synth 8-7023] instance 'regfile' of module 'registerfile' has 8 connections declared, but only 7 given [D:/project_coa/allunit.v:39]
+INFO: [Synth 8-6157] synthesizing module 'ID_EX_Register' [D:/project_coa/elemets.v:252]
+INFO: [Synth 8-6155] done synthesizing module 'ID_EX_Register' (7#1) [D:/project_coa/elemets.v:252]
+WARNING: [Synth 8-7023] instance 'id_ex_reg' of module 'ID_EX_Register' has 4 connections declared, but only 3 given [D:/project_coa/allunit.v:41]
+INFO: [Synth 8-6157] synthesizing module 'multiplexer32bit' [D:/project_coa/elemets.v:221]
+INFO: [Synth 8-6155] done synthesizing module 'multiplexer32bit' (8#1) [D:/project_coa/elemets.v:221]
+INFO: [Synth 8-6157] synthesizing module 'ALU_32bit' [D:/project_coa/elemets.v:182]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_32bit' (9#1) [D:/project_coa/elemets.v:182]
+WARNING: [Synth 8-689] width (6) of port connection 'alu_control' does not match port width (4) of module 'ALU_32bit' [D:/project_coa/allunit.v:43]
+INFO: [Synth 8-6157] synthesizing module 'EX_MEM_Register' [D:/project_coa/elemets.v:269]
+INFO: [Synth 8-6155] done synthesizing module 'EX_MEM_Register' (10#1) [D:/project_coa/elemets.v:269]
+WARNING: [Synth 8-7023] instance 'ex_mem_reg' of module 'EX_MEM_Register' has 4 connections declared, but only 3 given [D:/project_coa/allunit.v:45]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [D:/project_coa/elemets.v:148]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-567] referenced signal 'write_enable' should be on the sensitivity list [D:/project_coa/elemets.v:163]
+WARNING: [Synth 8-567] referenced signal 'write_data' should be on the sensitivity list [D:/project_coa/elemets.v:163]
+WARNING: [Synth 8-567] referenced signal 'read_enable' should be on the sensitivity list [D:/project_coa/elemets.v:169]
+WARNING: [Synth 8-567] referenced signal 'memory' should be on the sensitivity list [D:/project_coa/elemets.v:169]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (11#1) [D:/project_coa/elemets.v:148]
+INFO: [Synth 8-6157] synthesizing module 'MEM_WB_Register' [D:/project_coa/elemets.v:286]
+INFO: [Synth 8-6155] done synthesizing module 'MEM_WB_Register' (12#1) [D:/project_coa/elemets.v:286]
+WARNING: [Synth 8-7023] instance 'mem_wb_reg' of module 'MEM_WB_Register' has 4 connections declared, but only 3 given [D:/project_coa/allunit.v:49]
+INFO: [Synth 8-6157] synthesizing module 'HazardDetectionUnit' [D:/project_coa/elemets.v:436]
+INFO: [Synth 8-6155] done synthesizing module 'HazardDetectionUnit' (13#1) [D:/project_coa/elemets.v:436]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/project_coa/allunit.v:53]
+INFO: [Synth 8-6157] synthesizing module 'ForwardingUnit' [D:/project_coa/elemets.v:460]
+INFO: [Synth 8-6155] done synthesizing module 'ForwardingUnit' (14#1) [D:/project_coa/elemets.v:460]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/project_coa/allunit.v:57]
+INFO: [Synth 8-6157] synthesizing module 'HazardRemovalUnit' [D:/project_coa/elemets.v:492]
+INFO: [Synth 8-6155] done synthesizing module 'HazardRemovalUnit' (15#1) [D:/project_coa/elemets.v:492]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/project_coa/allunit.v:61]
+INFO: [Synth 8-6157] synthesizing module 'StructuralHazardRemovalUnit' [D:/project_coa/elemets.v:517]
+INFO: [Synth 8-6155] done synthesizing module 'StructuralHazardRemovalUnit' (16#1) [D:/project_coa/elemets.v:517]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/project_coa/allunit.v:63]
+INFO: [Synth 8-6157] synthesizing module 'LoadHazardRemovalUnit' [D:/project_coa/elemets.v:542]
+INFO: [Synth 8-6155] done synthesizing module 'LoadHazardRemovalUnit' (17#1) [D:/project_coa/elemets.v:542]
+WARNING: [Synth 8-3848] Net reset in module/entity MIPS_ProcessorallUNIT does not have driver. [D:/project_coa/allunit.v:14]
+WARNING: [Synth 8-3848] Net regread in module/entity MIPS_ProcessorallUNIT does not have driver. [D:/project_coa/allunit.v:23]
+WARNING: [Synth 8-3848] Net mem_to_reg in module/entity MIPS_ProcessorallUNIT does not have driver. [D:/project_coa/allunit.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'MIPS_ProcessorallUNIT' (18#1) [D:/project_coa/allunit.v:1]
+WARNING: [Synth 8-3331] design HazardRemovalUnit has unconnected port EX_MEM_RegRead
+WARNING: [Synth 8-3331] design ForwardingUnit has unconnected port mem_wb_mem_to_reg
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[31]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[30]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[29]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[28]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[27]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[26]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[15]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[14]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[13]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[12]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[11]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[10]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[9]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[8]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[7]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[6]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[5]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[4]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[3]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[2]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[1]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port if_id_instruction[0]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[31]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[30]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[29]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[28]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[27]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[26]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[25]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[24]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[23]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[22]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[21]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[10]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[9]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[8]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[7]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[6]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[5]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[4]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[3]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[2]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[1]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port id_ex_instruction[0]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[31]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[30]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[29]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[28]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[27]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[26]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[25]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[24]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[23]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[22]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[21]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[15]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[14]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[13]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[12]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[11]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[10]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[9]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[8]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[7]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[6]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[5]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[4]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[3]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[2]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[1]
+WARNING: [Synth 8-3331] design HazardDetectionUnit has unconnected port ex_mem_result[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1183.516 ; gain = 235.469
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1183.516 ; gain = 235.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1183.516 ; gain = 235.469
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1306.781 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 1318.562 ; gain = 370.516
+41 Infos, 125 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 1318.562 ; gain = 583.805
+write_schematic D:/education/itu/4th semester/coa/schematictask03.sch
+ERROR: [Common 17-165] Too many positional options when parsing 'semester/coa/schematictask03.sch', please type 'write_schematic -help' for usage info.
+set_property top MIPS_Processor_TB [current_fileset]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close_design
+update_compile_order -fileset sources_1
+set_property top MIPSStimulus [current_fileset]
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 4
+[Wed May 24 06:31:41 2023] Launched synth_1...
+Run output will be captured here: D:/project_coa/project_coa.runs/synth_1/runme.log
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'MIPS_ProcessorallUNIT' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MIPS_ProcessorallUNIT_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project_coa/elemets.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProgramCounter
+INFO: [VRFC 10-311] analyzing module BitAdder32
+INFO: [VRFC 10-311] analyzing module registerfile
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-311] analyzing module SignExtender_16to32
+INFO: [VRFC 10-311] analyzing module ALU_32bit
+INFO: [VRFC 10-311] analyzing module multiplexer5bit
+INFO: [VRFC 10-311] analyzing module multiplexer32bit
+INFO: [VRFC 10-311] analyzing module IF_ID_Register
+INFO: [VRFC 10-311] analyzing module ID_EX_Register
+INFO: [VRFC 10-311] analyzing module EX_MEM_Register
+INFO: [VRFC 10-311] analyzing module MEM_WB_Register
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-311] analyzing module ControlDelaySlot
+INFO: [VRFC 10-311] analyzing module HazardDetectionUnit
+INFO: [VRFC 10-311] analyzing module ForwardingUnit
+INFO: [VRFC 10-311] analyzing module HazardRemovalUnit
+INFO: [VRFC 10-311] analyzing module StructuralHazardRemovalUnit
+INFO: [VRFC 10-311] analyzing module LoadHazardRemovalUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project_coa/allunit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_ProcessorallUNIT
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xelab -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPS_ProcessorallUNIT_behav xil_defaultlib.MIPS_ProcessorallUNIT xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPS_ProcessorallUNIT_behav xil_defaultlib.MIPS_ProcessorallUNIT xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/allunit.v:35]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 32 for port 'a' [D:/project_coa/allunit.v:42]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/allunit.v:43]
+WARNING: [VRFC 10-3705] select index 2 into 'MEM' is out of bounds [D:/project_coa/elemets.v:135]
+WARNING: [VRFC 10-3705] select index 3 into 'MEM' is out of bounds [D:/project_coa/elemets.v:136]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ProgramCounter
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.IF_ID_Register
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.SignExtender_16to32
+Compiling module xil_defaultlib.registerfile
+Compiling module xil_defaultlib.ID_EX_Register
+Compiling module xil_defaultlib.multiplexer32bit
+Compiling module xil_defaultlib.ALU_32bit
+Compiling module xil_defaultlib.EX_MEM_Register
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.MEM_WB_Register
+Compiling module xil_defaultlib.HazardDetectionUnit
+Compiling module xil_defaultlib.ForwardingUnit
+Compiling module xil_defaultlib.HazardRemovalUnit
+Compiling module xil_defaultlib.StructuralHazardRemovalUnit
+Compiling module xil_defaultlib.LoadHazardRemovalUnit
+Compiling module xil_defaultlib.MIPS_ProcessorallUNIT
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot MIPS_ProcessorallUNIT_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/project_coa/project_coa.sim/sim_1/behav/xsim/xsim.dir/MIPS_ProcessorallUNIT_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/project_coa/project_coa.sim/sim_1/behav/xsim/xsim.dir/MIPS_ProcessorallUNIT_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed May 24 06:31:59 2023. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed May 24 06:31:59 2023...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1323.383 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "MIPS_ProcessorallUNIT_behav -key {Behavioral:sim_1:Functional:MIPS_ProcessorallUNIT} -tclbatch {MIPS_ProcessorallUNIT.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source MIPS_ProcessorallUNIT.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'MIPS_ProcessorallUNIT_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1323.383 ; gain = 0.000
+reset_run synth_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1323.383 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'MIPS_ProcessorallUNIT' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MIPS_ProcessorallUNIT_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project_coa/allunit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_ProcessorallUNIT
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xelab -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPS_ProcessorallUNIT_behav xil_defaultlib.MIPS_ProcessorallUNIT xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPS_ProcessorallUNIT_behav xil_defaultlib.MIPS_ProcessorallUNIT xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/allunit.v:35]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 32 for port 'a' [D:/project_coa/allunit.v:42]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/allunit.v:43]
+WARNING: [VRFC 10-3705] select index 2 into 'MEM' is out of bounds [D:/project_coa/elemets.v:135]
+WARNING: [VRFC 10-3705] select index 3 into 'MEM' is out of bounds [D:/project_coa/elemets.v:136]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 22. Module ProgramCounter has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 127. Module InstructionMemory has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 236. Module IF_ID_Register has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 304. Module ControlUnit has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 177. Module SignExtender_16to32 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 45. Module registerfile has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 252. Module ID_EX_Register has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 221. Module multiplexer32bit has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 182. Module ALU_32bit has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 269. Module EX_MEM_Register has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 148. Module DataMemory has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 221. Module multiplexer32bit has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 286. Module MEM_WB_Register has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 436. Module HazardDetectionUnit has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 460. Module ForwardingUnit has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 492. Module HazardRemovalUnit has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 517. Module StructuralHazardRemovalUnit has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/elemets.v" Line 542. Module LoadHazardRemovalUnit has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "D:/project_coa/project_coa.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ProgramCounter
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.IF_ID_Register
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.SignExtender_16to32
+Compiling module xil_defaultlib.registerfile
+Compiling module xil_defaultlib.ID_EX_Register
+Compiling module xil_defaultlib.multiplexer32bit
+Compiling module xil_defaultlib.ALU_32bit
+Compiling module xil_defaultlib.EX_MEM_Register
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.MEM_WB_Register
+Compiling module xil_defaultlib.HazardDetectionUnit
+Compiling module xil_defaultlib.ForwardingUnit
+Compiling module xil_defaultlib.HazardRemovalUnit
+Compiling module xil_defaultlib.StructuralHazardRemovalUnit
+Compiling module xil_defaultlib.LoadHazardRemovalUnit
+Compiling module xil_defaultlib.MIPS_ProcessorallUNIT
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot MIPS_ProcessorallUNIT_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "MIPS_ProcessorallUNIT_behav -key {Behavioral:sim_1:Functional:MIPS_ProcessorallUNIT} -tclbatch {MIPS_ProcessorallUNIT.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source MIPS_ProcessorallUNIT.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'MIPS_ProcessorallUNIT_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1323.383 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'MIPS_ProcessorallUNIT' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MIPS_ProcessorallUNIT_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xelab -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPS_ProcessorallUNIT_behav xil_defaultlib.MIPS_ProcessorallUNIT xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPS_ProcessorallUNIT_behav xil_defaultlib.MIPS_ProcessorallUNIT xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/allunit.v:35]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 32 for port 'a' [D:/project_coa/allunit.v:42]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/allunit.v:43]
+WARNING: [VRFC 10-3705] select index 2 into 'MEM' is out of bounds [D:/project_coa/elemets.v:135]
+WARNING: [VRFC 10-3705] select index 3 into 'MEM' is out of bounds [D:/project_coa/elemets.v:136]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "MIPS_ProcessorallUNIT_behav -key {Behavioral:sim_1:Functional:MIPS_ProcessorallUNIT} -tclbatch {MIPS_ProcessorallUNIT.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source MIPS_ProcessorallUNIT.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'MIPS_ProcessorallUNIT_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1323.383 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'MIPS_ProcessorallUNIT' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MIPS_ProcessorallUNIT_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xelab -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPS_ProcessorallUNIT_behav xil_defaultlib.MIPS_ProcessorallUNIT xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPS_ProcessorallUNIT_behav xil_defaultlib.MIPS_ProcessorallUNIT xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/allunit.v:35]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 32 for port 'a' [D:/project_coa/allunit.v:42]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/allunit.v:43]
+WARNING: [VRFC 10-3705] select index 2 into 'MEM' is out of bounds [D:/project_coa/elemets.v:135]
+WARNING: [VRFC 10-3705] select index 3 into 'MEM' is out of bounds [D:/project_coa/elemets.v:136]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "MIPS_ProcessorallUNIT_behav -key {Behavioral:sim_1:Functional:MIPS_ProcessorallUNIT} -tclbatch {MIPS_ProcessorallUNIT.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source MIPS_ProcessorallUNIT.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'MIPS_ProcessorallUNIT_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1323.383 ; gain = 0.000
+set_property is_enabled false [get_files  D:/project_coa/allunit.v]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'MIPSStimulus' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MIPSStimulus_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project_coa/elemets.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProgramCounter
+INFO: [VRFC 10-311] analyzing module BitAdder32
+INFO: [VRFC 10-311] analyzing module registerfile
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-311] analyzing module SignExtender_16to32
+INFO: [VRFC 10-311] analyzing module ALU_32bit
+INFO: [VRFC 10-311] analyzing module multiplexer5bit
+INFO: [VRFC 10-311] analyzing module multiplexer32bit
+INFO: [VRFC 10-311] analyzing module IF_ID_Register
+INFO: [VRFC 10-311] analyzing module ID_EX_Register
+INFO: [VRFC 10-311] analyzing module EX_MEM_Register
+INFO: [VRFC 10-311] analyzing module MEM_WB_Register
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-311] analyzing module ControlDelaySlot
+INFO: [VRFC 10-311] analyzing module HazardDetectionUnit
+INFO: [VRFC 10-311] analyzing module ForwardingUnit
+INFO: [VRFC 10-311] analyzing module HazardRemovalUnit
+INFO: [VRFC 10-311] analyzing module StructuralHazardRemovalUnit
+INFO: [VRFC 10-311] analyzing module LoadHazardRemovalUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project_coa/pipelined_register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_Processor
+INFO: [VRFC 10-311] analyzing module MIPSStimulus
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xelab -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPSStimulus_behav xil_defaultlib.MIPSStimulus xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPSStimulus_behav xil_defaultlib.MIPSStimulus xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/pipelined_register.v:55]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 32 for port 'a' [D:/project_coa/pipelined_register.v:62]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/pipelined_register.v:63]
+WARNING: [VRFC 10-3705] select index 2 into 'MEM' is out of bounds [D:/project_coa/elemets.v:135]
+WARNING: [VRFC 10-3705] select index 3 into 'MEM' is out of bounds [D:/project_coa/elemets.v:136]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ProgramCounter
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.IF_ID_Register
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.SignExtender_16to32
+Compiling module xil_defaultlib.registerfile
+Compiling module xil_defaultlib.ID_EX_Register
+Compiling module xil_defaultlib.multiplexer32bit
+Compiling module xil_defaultlib.ALU_32bit
+Compiling module xil_defaultlib.EX_MEM_Register
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.MEM_WB_Register
+Compiling module xil_defaultlib.MIPS_Processor
+Compiling module xil_defaultlib.MIPSStimulus
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot MIPSStimulus_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/project_coa/project_coa.sim/sim_1/behav/xsim/xsim.dir/MIPSStimulus_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/project_coa/project_coa.sim/sim_1/behav/xsim/xsim.dir/MIPSStimulus_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed May 24 12:01:40 2023. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed May 24 12:01:40 2023...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1426.383 ; gain = 0.039
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "MIPSStimulus_behav -key {Behavioral:sim_1:Functional:MIPSStimulus} -tclbatch {MIPSStimulus.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source MIPSStimulus.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'MIPSStimulus_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:12 . Memory (MB): peak = 1435.434 ; gain = 9.168
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1602.703 ; gain = 0.000
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'MIPSStimulus' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MIPSStimulus_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project_coa/elemets.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProgramCounter
+INFO: [VRFC 10-311] analyzing module BitAdder32
+INFO: [VRFC 10-311] analyzing module registerfile
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-311] analyzing module SignExtender_16to32
+INFO: [VRFC 10-311] analyzing module ALU_32bit
+INFO: [VRFC 10-311] analyzing module multiplexer5bit
+INFO: [VRFC 10-311] analyzing module multiplexer32bit
+INFO: [VRFC 10-311] analyzing module IF_ID_Register
+INFO: [VRFC 10-311] analyzing module ID_EX_Register
+INFO: [VRFC 10-311] analyzing module EX_MEM_Register
+INFO: [VRFC 10-311] analyzing module MEM_WB_Register
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-311] analyzing module ControlDelaySlot
+INFO: [VRFC 10-311] analyzing module HazardDetectionUnit
+INFO: [VRFC 10-311] analyzing module ForwardingUnit
+INFO: [VRFC 10-311] analyzing module HazardRemovalUnit
+INFO: [VRFC 10-311] analyzing module StructuralHazardRemovalUnit
+INFO: [VRFC 10-311] analyzing module LoadHazardRemovalUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project_coa/pipelined_register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_Processor
+INFO: [VRFC 10-311] analyzing module MIPSStimulus
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xelab -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPSStimulus_behav xil_defaultlib.MIPSStimulus xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPSStimulus_behav xil_defaultlib.MIPSStimulus xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-2989] 'main' is not declared [D:/project_coa/pipelined_register.v:89]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/pipelined_register.v:55]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 32 for port 'a' [D:/project_coa/pipelined_register.v:62]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/pipelined_register.v:63]
+WARNING: [VRFC 10-3705] select index 2 into 'MEM' is out of bounds [D:/project_coa/elemets.v:135]
+WARNING: [VRFC 10-3705] select index 3 into 'MEM' is out of bounds [D:/project_coa/elemets.v:136]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/project_coa/project_coa.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/project_coa/project_coa.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'MIPSStimulus' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MIPSStimulus_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project_coa/elemets.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProgramCounter
+INFO: [VRFC 10-311] analyzing module BitAdder32
+INFO: [VRFC 10-311] analyzing module registerfile
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-311] analyzing module SignExtender_16to32
+INFO: [VRFC 10-311] analyzing module ALU_32bit
+INFO: [VRFC 10-311] analyzing module multiplexer5bit
+INFO: [VRFC 10-311] analyzing module multiplexer32bit
+INFO: [VRFC 10-311] analyzing module IF_ID_Register
+INFO: [VRFC 10-311] analyzing module ID_EX_Register
+INFO: [VRFC 10-311] analyzing module EX_MEM_Register
+INFO: [VRFC 10-311] analyzing module MEM_WB_Register
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-311] analyzing module ControlDelaySlot
+INFO: [VRFC 10-311] analyzing module HazardDetectionUnit
+INFO: [VRFC 10-311] analyzing module ForwardingUnit
+INFO: [VRFC 10-311] analyzing module HazardRemovalUnit
+INFO: [VRFC 10-311] analyzing module StructuralHazardRemovalUnit
+INFO: [VRFC 10-311] analyzing module LoadHazardRemovalUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project_coa/pipelined_register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_Processor
+INFO: [VRFC 10-311] analyzing module MIPSStimulus
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xelab -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPSStimulus_behav xil_defaultlib.MIPSStimulus xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPSStimulus_behav xil_defaultlib.MIPSStimulus xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/pipelined_register.v:55]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 32 for port 'a' [D:/project_coa/pipelined_register.v:62]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/pipelined_register.v:63]
+WARNING: [VRFC 10-3705] select index 2 into 'MEM' is out of bounds [D:/project_coa/elemets.v:135]
+WARNING: [VRFC 10-3705] select index 3 into 'MEM' is out of bounds [D:/project_coa/elemets.v:136]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ProgramCounter
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.IF_ID_Register
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.SignExtender_16to32
+Compiling module xil_defaultlib.registerfile
+Compiling module xil_defaultlib.ID_EX_Register
+Compiling module xil_defaultlib.multiplexer32bit
+Compiling module xil_defaultlib.ALU_32bit
+Compiling module xil_defaultlib.EX_MEM_Register
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.MEM_WB_Register
+Compiling module xil_defaultlib.MIPS_Processor
+Compiling module xil_defaultlib.MIPSStimulus
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot MIPSStimulus_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "MIPSStimulus_behav -key {Behavioral:sim_1:Functional:MIPSStimulus} -tclbatch {MIPSStimulus.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source MIPSStimulus.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'MIPSStimulus_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1603.918 ; gain = 1.215
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'MIPSStimulus' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MIPSStimulus_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project_coa/elemets.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProgramCounter
+INFO: [VRFC 10-311] analyzing module BitAdder32
+INFO: [VRFC 10-311] analyzing module registerfile
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-311] analyzing module SignExtender_16to32
+INFO: [VRFC 10-311] analyzing module ALU_32bit
+INFO: [VRFC 10-311] analyzing module multiplexer5bit
+INFO: [VRFC 10-311] analyzing module multiplexer32bit
+INFO: [VRFC 10-311] analyzing module IF_ID_Register
+INFO: [VRFC 10-311] analyzing module ID_EX_Register
+INFO: [VRFC 10-311] analyzing module EX_MEM_Register
+INFO: [VRFC 10-311] analyzing module MEM_WB_Register
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-311] analyzing module ControlDelaySlot
+INFO: [VRFC 10-311] analyzing module HazardDetectionUnit
+INFO: [VRFC 10-311] analyzing module ForwardingUnit
+INFO: [VRFC 10-311] analyzing module HazardRemovalUnit
+INFO: [VRFC 10-311] analyzing module StructuralHazardRemovalUnit
+INFO: [VRFC 10-311] analyzing module LoadHazardRemovalUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project_coa/pipelined_register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_Processor
+INFO: [VRFC 10-311] analyzing module MIPSStimulus
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xelab -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPSStimulus_behav xil_defaultlib.MIPSStimulus xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPSStimulus_behav xil_defaultlib.MIPSStimulus xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/pipelined_register.v:55]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 32 for port 'a' [D:/project_coa/pipelined_register.v:62]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/pipelined_register.v:63]
+WARNING: [VRFC 10-3705] select index 2 into 'MEM' is out of bounds [D:/project_coa/elemets.v:135]
+WARNING: [VRFC 10-3705] select index 3 into 'MEM' is out of bounds [D:/project_coa/elemets.v:136]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ProgramCounter
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.IF_ID_Register
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.SignExtender_16to32
+Compiling module xil_defaultlib.registerfile
+Compiling module xil_defaultlib.ID_EX_Register
+Compiling module xil_defaultlib.multiplexer32bit
+Compiling module xil_defaultlib.ALU_32bit
+Compiling module xil_defaultlib.EX_MEM_Register
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.MEM_WB_Register
+Compiling module xil_defaultlib.MIPS_Processor
+Compiling module xil_defaultlib.MIPSStimulus
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot MIPSStimulus_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "MIPSStimulus_behav -key {Behavioral:sim_1:Functional:MIPSStimulus} -tclbatch {MIPSStimulus.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source MIPSStimulus.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'MIPSStimulus_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1603.918 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'MIPSStimulus' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj MIPSStimulus_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project_coa/elemets.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProgramCounter
+INFO: [VRFC 10-311] analyzing module BitAdder32
+INFO: [VRFC 10-311] analyzing module registerfile
+INFO: [VRFC 10-311] analyzing module InstructionMemory
+INFO: [VRFC 10-311] analyzing module DataMemory
+INFO: [VRFC 10-311] analyzing module SignExtender_16to32
+INFO: [VRFC 10-311] analyzing module ALU_32bit
+INFO: [VRFC 10-311] analyzing module multiplexer5bit
+INFO: [VRFC 10-311] analyzing module multiplexer32bit
+INFO: [VRFC 10-311] analyzing module IF_ID_Register
+INFO: [VRFC 10-311] analyzing module ID_EX_Register
+INFO: [VRFC 10-311] analyzing module EX_MEM_Register
+INFO: [VRFC 10-311] analyzing module MEM_WB_Register
+INFO: [VRFC 10-311] analyzing module ControlUnit
+INFO: [VRFC 10-311] analyzing module ControlDelaySlot
+INFO: [VRFC 10-311] analyzing module HazardDetectionUnit
+INFO: [VRFC 10-311] analyzing module ForwardingUnit
+INFO: [VRFC 10-311] analyzing module HazardRemovalUnit
+INFO: [VRFC 10-311] analyzing module StructuralHazardRemovalUnit
+INFO: [VRFC 10-311] analyzing module LoadHazardRemovalUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project_coa/pipelined_register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MIPS_Processor
+INFO: [VRFC 10-311] analyzing module MIPSStimulus
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xelab -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPSStimulus_behav xil_defaultlib.MIPSStimulus xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot MIPSStimulus_behav xil_defaultlib.MIPSStimulus xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/pipelined_register.v:55]
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 32 for port 'a' [D:/project_coa/pipelined_register.v:62]
+WARNING: [VRFC 10-3091] actual bit length 6 differs from formal bit length 4 for port 'alu_control' [D:/project_coa/pipelined_register.v:63]
+WARNING: [VRFC 10-3705] select index 2 into 'MEM' is out of bounds [D:/project_coa/elemets.v:135]
+WARNING: [VRFC 10-3705] select index 3 into 'MEM' is out of bounds [D:/project_coa/elemets.v:136]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ProgramCounter
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.IF_ID_Register
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.SignExtender_16to32
+Compiling module xil_defaultlib.registerfile
+Compiling module xil_defaultlib.ID_EX_Register
+Compiling module xil_defaultlib.multiplexer32bit
+Compiling module xil_defaultlib.ALU_32bit
+Compiling module xil_defaultlib.EX_MEM_Register
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.MEM_WB_Register
+Compiling module xil_defaultlib.MIPS_Processor
+Compiling module xil_defaultlib.MIPSStimulus
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot MIPSStimulus_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "MIPSStimulus_behav -key {Behavioral:sim_1:Functional:MIPSStimulus} -tclbatch {MIPSStimulus.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source MIPSStimulus.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'MIPSStimulus_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1665.523 ; gain = 1.629
+set_property is_enabled false [get_files  D:/project_coa/pipelined_register.v]
+update_compile_order -fileset sources_1
+launch_simulation
+boost::filesystem::remove: The process cannot access the file because it is being used by another process: "D:/project_coa/project_coa.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_top_module' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_top_module_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/project_coa/singlecycledatapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_top_module
+INFO: [VRFC 10-311] analyzing module mainModule
+INFO: [VRFC 10-311] analyzing module Datapath
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xelab -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_top_module_behav xil_defaultlib.testbench_top_module xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_top_module_behav xil_defaultlib.testbench_top_module xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3705] select index 2 into 'MEM' is out of bounds [D:/project_coa/elemets.v:135]
+WARNING: [VRFC 10-3705] select index 3 into 'MEM' is out of bounds [D:/project_coa/elemets.v:136]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ProgramCounter
+Compiling module xil_defaultlib.InstructionMemory
+Compiling module xil_defaultlib.SignExtender_16to32
+Compiling module xil_defaultlib.registerfile
+Compiling module xil_defaultlib.ALU_32bit
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.multiplexer5bit
+Compiling module xil_defaultlib.multiplexer32bit
+Compiling module xil_defaultlib.Datapath
+Compiling module xil_defaultlib.ControlUnit
+Compiling module xil_defaultlib.mainModule
+Compiling module xil_defaultlib.testbench_top_module
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_top_module_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_top_module_behav -key {Behavioral:sim_1:Functional:testbench_top_module} -tclbatch {testbench_top_module.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_top_module.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_top_module_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1665.523 ; gain = 0.000
+set_property top mainModule [current_fileset]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: mainModule
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1665.523 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'mainModule' [D:/project_coa/singlecycledatapath.v:37]
+INFO: [Synth 8-6157] synthesizing module 'Datapath' [D:/project_coa/singlecycledatapath.v:48]
+INFO: [Synth 8-6157] synthesizing module 'ProgramCounter' [D:/project_coa/elemets.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'ProgramCounter' (1#1) [D:/project_coa/elemets.v:22]
+INFO: [Synth 8-6157] synthesizing module 'InstructionMemory' [D:/project_coa/elemets.v:127]
+WARNING: [Synth 8-6896] index 2 out of range inside initial block, initial block items will be ignored [D:/project_coa/elemets.v:135]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionMemory' (2#1) [D:/project_coa/elemets.v:127]
+INFO: [Synth 8-6157] synthesizing module 'SignExtender_16to32' [D:/project_coa/elemets.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'SignExtender_16to32' (3#1) [D:/project_coa/elemets.v:177]
+INFO: [Synth 8-6157] synthesizing module 'registerfile' [D:/project_coa/elemets.v:45]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/project_coa/elemets.v:96]
+INFO: [Synth 8-6155] done synthesizing module 'registerfile' (4#1) [D:/project_coa/elemets.v:45]
+INFO: [Synth 8-6157] synthesizing module 'ALU_32bit' [D:/project_coa/elemets.v:182]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_32bit' (5#1) [D:/project_coa/elemets.v:182]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [D:/project_coa/elemets.v:148]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-567] referenced signal 'write_enable' should be on the sensitivity list [D:/project_coa/elemets.v:163]
+WARNING: [Synth 8-567] referenced signal 'write_data' should be on the sensitivity list [D:/project_coa/elemets.v:163]
+WARNING: [Synth 8-567] referenced signal 'read_enable' should be on the sensitivity list [D:/project_coa/elemets.v:169]
+WARNING: [Synth 8-567] referenced signal 'memory' should be on the sensitivity list [D:/project_coa/elemets.v:169]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (6#1) [D:/project_coa/elemets.v:148]
+INFO: [Synth 8-6157] synthesizing module 'multiplexer5bit' [D:/project_coa/elemets.v:207]
+INFO: [Synth 8-6155] done synthesizing module 'multiplexer5bit' (7#1) [D:/project_coa/elemets.v:207]
+INFO: [Synth 8-6157] synthesizing module 'multiplexer32bit' [D:/project_coa/elemets.v:221]
+INFO: [Synth 8-6155] done synthesizing module 'multiplexer32bit' (8#1) [D:/project_coa/elemets.v:221]
+WARNING: [Synth 8-3848] Net reg_aa in module/entity Datapath does not have driver. [D:/project_coa/singlecycledatapath.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'Datapath' (9#1) [D:/project_coa/singlecycledatapath.v:48]
+INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [D:/project_coa/elemets.v:304]
+	Parameter R_TYPE bound to: 6'b000000 
+	Parameter LW bound to: 6'b100011 
+	Parameter SW bound to: 6'b101011 
+	Parameter BEQ bound to: 6'b000100 
+	Parameter J bound to: 6'b000010 
+WARNING: [Synth 8-567] referenced signal 'alu_op' should be on the sensitivity list [D:/project_coa/elemets.v:336]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (10#1) [D:/project_coa/elemets.v:304]
+INFO: [Synth 8-6155] done synthesizing module 'mainModule' (11#1) [D:/project_coa/singlecycledatapath.v:37]
+WARNING: [Synth 8-3331] design Datapath has unconnected port jump_sel[1]
+WARNING: [Synth 8-3331] design Datapath has unconnected port jump_sel[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1665.523 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1665.523 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1665.523 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1665.523 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1665.523 ; gain = 0.000
+26 Infos, 41 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1665.523 ; gain = 0.000
+set_property top Datapath [current_fileset]
+close_design
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: Datapath
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1665.523 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Datapath' [D:/project_coa/singlecycledatapath.v:48]
+INFO: [Synth 8-6157] synthesizing module 'ProgramCounter' [D:/project_coa/elemets.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'ProgramCounter' (1#1) [D:/project_coa/elemets.v:22]
+INFO: [Synth 8-6157] synthesizing module 'InstructionMemory' [D:/project_coa/elemets.v:127]
+WARNING: [Synth 8-6896] index 2 out of range inside initial block, initial block items will be ignored [D:/project_coa/elemets.v:135]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionMemory' (2#1) [D:/project_coa/elemets.v:127]
+INFO: [Synth 8-6157] synthesizing module 'SignExtender_16to32' [D:/project_coa/elemets.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'SignExtender_16to32' (3#1) [D:/project_coa/elemets.v:177]
+INFO: [Synth 8-6157] synthesizing module 'registerfile' [D:/project_coa/elemets.v:45]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/project_coa/elemets.v:96]
+INFO: [Synth 8-6155] done synthesizing module 'registerfile' (4#1) [D:/project_coa/elemets.v:45]
+INFO: [Synth 8-6157] synthesizing module 'ALU_32bit' [D:/project_coa/elemets.v:182]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_32bit' (5#1) [D:/project_coa/elemets.v:182]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [D:/project_coa/elemets.v:148]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-567] referenced signal 'write_enable' should be on the sensitivity list [D:/project_coa/elemets.v:163]
+WARNING: [Synth 8-567] referenced signal 'write_data' should be on the sensitivity list [D:/project_coa/elemets.v:163]
+WARNING: [Synth 8-567] referenced signal 'read_enable' should be on the sensitivity list [D:/project_coa/elemets.v:169]
+WARNING: [Synth 8-567] referenced signal 'memory' should be on the sensitivity list [D:/project_coa/elemets.v:169]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (6#1) [D:/project_coa/elemets.v:148]
+INFO: [Synth 8-6157] synthesizing module 'multiplexer5bit' [D:/project_coa/elemets.v:207]
+INFO: [Synth 8-6155] done synthesizing module 'multiplexer5bit' (7#1) [D:/project_coa/elemets.v:207]
+INFO: [Synth 8-6157] synthesizing module 'multiplexer32bit' [D:/project_coa/elemets.v:221]
+INFO: [Synth 8-6155] done synthesizing module 'multiplexer32bit' (8#1) [D:/project_coa/elemets.v:221]
+WARNING: [Synth 8-3848] Net reg_aa in module/entity Datapath does not have driver. [D:/project_coa/singlecycledatapath.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'Datapath' (9#1) [D:/project_coa/singlecycledatapath.v:48]
+WARNING: [Synth 8-3331] design Datapath has unconnected port jump_sel[1]
+WARNING: [Synth 8-3331] design Datapath has unconnected port jump_sel[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1665.523 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1665.523 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1665.523 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 6 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1665.523 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1665.523 ; gain = 0.000
+23 Infos, 40 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1665.523 ; gain = 0.000
+set_property top ControlUnit [current_fileset]
+update_compile_order -fileset sources_1
+close_design
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: ControlUnit
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1665.523 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [D:/project_coa/elemets.v:304]
+	Parameter R_TYPE bound to: 6'b000000 
+	Parameter LW bound to: 6'b100011 
+	Parameter SW bound to: 6'b101011 
+	Parameter BEQ bound to: 6'b000100 
+	Parameter J bound to: 6'b000010 
+WARNING: [Synth 8-567] referenced signal 'alu_op' should be on the sensitivity list [D:/project_coa/elemets.v:336]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (1#1) [D:/project_coa/elemets.v:304]
+WARNING: [Synth 8-3917] design ControlUnit has port jump_sel[1] driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1665.523 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1665.523 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1665.523 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1665.523 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1665.523 ; gain = 0.000
+6 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1665.523 ; gain = 0.000
+set_property is_enabled true [get_files  D:/project_coa/pipelined_register.v]
+update_compile_order -fileset sources_1
+set_property top MIPSStimulus [current_fileset]
+update_compile_order -fileset sources_1
+set_property top MIPS_Processor [current_fileset]
+close_design
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: MIPS_Processor
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1707.383 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'MIPS_Processor' [D:/project_coa/pipelined_register.v:22]
+INFO: [Synth 8-6157] synthesizing module 'ProgramCounter' [D:/project_coa/elemets.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'ProgramCounter' (1#1) [D:/project_coa/elemets.v:22]
+INFO: [Synth 8-6157] synthesizing module 'InstructionMemory' [D:/project_coa/elemets.v:127]
+WARNING: [Synth 8-6896] index 2 out of range inside initial block, initial block items will be ignored [D:/project_coa/elemets.v:135]
+INFO: [Synth 8-6155] done synthesizing module 'InstructionMemory' (2#1) [D:/project_coa/elemets.v:127]
+INFO: [Synth 8-6157] synthesizing module 'IF_ID_Register' [D:/project_coa/elemets.v:236]
+INFO: [Synth 8-6155] done synthesizing module 'IF_ID_Register' (3#1) [D:/project_coa/elemets.v:236]
+WARNING: [Synth 8-7023] instance 'if_id_reg' of module 'IF_ID_Register' has 4 connections declared, but only 3 given [D:/project_coa/pipelined_register.v:54]
+INFO: [Synth 8-6157] synthesizing module 'ControlUnit' [D:/project_coa/elemets.v:304]
+	Parameter R_TYPE bound to: 6'b000000 
+	Parameter LW bound to: 6'b100011 
+	Parameter SW bound to: 6'b101011 
+	Parameter BEQ bound to: 6'b000100 
+	Parameter J bound to: 6'b000010 
+WARNING: [Synth 8-567] referenced signal 'alu_op' should be on the sensitivity list [D:/project_coa/elemets.v:336]
+INFO: [Synth 8-6155] done synthesizing module 'ControlUnit' (4#1) [D:/project_coa/elemets.v:304]
+WARNING: [Synth 8-689] width (6) of port connection 'alu_control' does not match port width (4) of module 'ControlUnit' [D:/project_coa/pipelined_register.v:55]
+INFO: [Synth 8-6157] synthesizing module 'SignExtender_16to32' [D:/project_coa/elemets.v:177]
+INFO: [Synth 8-6155] done synthesizing module 'SignExtender_16to32' (5#1) [D:/project_coa/elemets.v:177]
+INFO: [Synth 8-6157] synthesizing module 'registerfile' [D:/project_coa/elemets.v:45]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/project_coa/elemets.v:96]
+INFO: [Synth 8-6155] done synthesizing module 'registerfile' (6#1) [D:/project_coa/elemets.v:45]
+WARNING: [Synth 8-7023] instance 'regfile' of module 'registerfile' has 8 connections declared, but only 7 given [D:/project_coa/pipelined_register.v:59]
+INFO: [Synth 8-6157] synthesizing module 'ID_EX_Register' [D:/project_coa/elemets.v:252]
+INFO: [Synth 8-6155] done synthesizing module 'ID_EX_Register' (7#1) [D:/project_coa/elemets.v:252]
+WARNING: [Synth 8-7023] instance 'id_ex_reg' of module 'ID_EX_Register' has 4 connections declared, but only 3 given [D:/project_coa/pipelined_register.v:61]
+INFO: [Synth 8-6157] synthesizing module 'multiplexer32bit' [D:/project_coa/elemets.v:221]
+INFO: [Synth 8-6155] done synthesizing module 'multiplexer32bit' (8#1) [D:/project_coa/elemets.v:221]
+INFO: [Synth 8-6157] synthesizing module 'ALU_32bit' [D:/project_coa/elemets.v:182]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_32bit' (9#1) [D:/project_coa/elemets.v:182]
+WARNING: [Synth 8-689] width (6) of port connection 'alu_control' does not match port width (4) of module 'ALU_32bit' [D:/project_coa/pipelined_register.v:63]
+INFO: [Synth 8-6157] synthesizing module 'EX_MEM_Register' [D:/project_coa/elemets.v:269]
+INFO: [Synth 8-6155] done synthesizing module 'EX_MEM_Register' (10#1) [D:/project_coa/elemets.v:269]
+WARNING: [Synth 8-7023] instance 'ex_mem_reg' of module 'EX_MEM_Register' has 4 connections declared, but only 3 given [D:/project_coa/pipelined_register.v:65]
+INFO: [Synth 8-6157] synthesizing module 'DataMemory' [D:/project_coa/elemets.v:148]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-639] system function call 'random' not supported [D:/project_coa/elemets.v:160]
+WARNING: [Synth 8-567] referenced signal 'write_enable' should be on the sensitivity list [D:/project_coa/elemets.v:163]
+WARNING: [Synth 8-567] referenced signal 'write_data' should be on the sensitivity list [D:/project_coa/elemets.v:163]
+WARNING: [Synth 8-567] referenced signal 'read_enable' should be on the sensitivity list [D:/project_coa/elemets.v:169]
+WARNING: [Synth 8-567] referenced signal 'memory' should be on the sensitivity list [D:/project_coa/elemets.v:169]
+INFO: [Synth 8-6155] done synthesizing module 'DataMemory' (11#1) [D:/project_coa/elemets.v:148]
+INFO: [Synth 8-6157] synthesizing module 'MEM_WB_Register' [D:/project_coa/elemets.v:286]
+INFO: [Synth 8-6155] done synthesizing module 'MEM_WB_Register' (12#1) [D:/project_coa/elemets.v:286]
+WARNING: [Synth 8-7023] instance 'mem_wb_reg' of module 'MEM_WB_Register' has 4 connections declared, but only 3 given [D:/project_coa/pipelined_register.v:69]
+WARNING: [Synth 8-3848] Net mem_to_reg in module/entity MIPS_Processor does not have driver. [D:/project_coa/pipelined_register.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'MIPS_Processor' (13#1) [D:/project_coa/pipelined_register.v:22]
+WARNING: [Synth 8-3331] design MIPS_Processor has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1707.383 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1707.383 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1707.383 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1707.383 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1707.383 ; gain = 0.000
+30 Infos, 47 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1707.383 ; gain = 0.000
+close_design
+set_property is_enabled true [get_files  D:/project_coa/allunit.v]
+update_compile_order -fileset sources_1
+set_property top MIPS_ProcessorallUNIT [current_fileset]
+update_compile_order -fileset sources_1
+set_property top MIPS_testbench [current_fileset]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_top_module' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_top_module_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xelab -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_top_module_behav xil_defaultlib.testbench_top_module xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_top_module_behav xil_defaultlib.testbench_top_module xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3705] select index 2 into 'MEM' is out of bounds [D:/project_coa/elemets.v:135]
+WARNING: [VRFC 10-3705] select index 3 into 'MEM' is out of bounds [D:/project_coa/elemets.v:136]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_top_module_behav -key {Behavioral:sim_1:Functional:testbench_top_module} -tclbatch {testbench_top_module.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_top_module.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_top_module_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1707.383 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_top_module' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj testbench_top_module_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+"xelab -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_top_module_behav xil_defaultlib.testbench_top_module xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto e88ba2fe2e944d30959a0219f222b161 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_top_module_behav xil_defaultlib.testbench_top_module xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3705] select index 2 into 'MEM' is out of bounds [D:/project_coa/elemets.v:135]
+WARNING: [VRFC 10-3705] select index 3 into 'MEM' is out of bounds [D:/project_coa/elemets.v:136]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/project_coa/project_coa.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_top_module_behav -key {Behavioral:sim_1:Functional:testbench_top_module} -tclbatch {testbench_top_module.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source testbench_top_module.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_top_module_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1707.383 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed May 24 13:01:48 2023...

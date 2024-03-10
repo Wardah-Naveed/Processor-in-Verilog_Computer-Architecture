@@ -1,0 +1,9 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/project_coa/allunit.v,1684890255,verilog,,,,MIPS_ProcessorallUNIT,,,,,,,,
+D:/project_coa/elemets.v,1684888866,verilog,,D:/project_coa/singlecycledatapath.v,,ALU_32bit;BitAdder32;ControlDelaySlot;ControlUnit;DataMemory;EX_MEM_Register;ForwardingUnit;HazardDetectionUnit;HazardRemovalUnit;ID_EX_Register;IF_ID_Register;InstructionMemory;LoadHazardRemovalUnit;MEM_WB_Register;ProgramCounter;SignExtender_16to32;StructuralHazardRemovalUnit;multiplexer32bit;multiplexer5bit;registerfile,,,,,,,,
+D:/project_coa/pipelined_register.v,1684912088,verilog,,,,MIPSStimulus;MIPS_Processor,,,,,,,,
+D:/project_coa/project_coa.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+D:/project_coa/singlecycledatapath.v,1684882012,verilog,,,,Datapath;mainModule;testbench_top_module,,,,,,,,
